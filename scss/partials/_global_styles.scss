@@ -1,0 +1,125 @@
+@import "_global_variables";
+@import "_media_queries";
+
+
+
+//Navigation
+.nav-link {
+  list-style-type: none;
+  text-transform: lowercase;
+
+  @include mq-web-layout {
+    padding: 0 $small-gap;
+  };
+
+  @include mq-phone-layout{
+    padding: 1rem 1rem 0 0rem;
+  };
+
+
+  a:hover {
+    color: $accent-colour;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+}
+
+
+//Footer
+footer {
+  grid-area: footer;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-right: $large-gap;
+
+  @include mq-web-layout {
+    justify-content: flex-end;
+  };
+
+  @include mq-phone-layout {
+    justify-content: space-around;
+  };
+
+  a {
+    font-size: 2rem;
+    margin-bottom: $small-gap;
+    color: $text-colour;
+
+    a:visited {
+      color: $text-colour;
+    }
+
+    @include mq-web-layout {
+      color: $text-colour;
+      margin-left: $small-gap;
+    };
+
+    @include mq-phone-layout {
+      margin-top: $small-gap;
+    };
+  }
+
+  @include mq-web-layout {
+    a:hover {
+      color: $accent-colour;
+      transition: 0.3s;
+    }
+  };
+
+}
+
+
+//Display
+.hidden {
+  display: none;
+}
+
+@include mq-web-layout {
+  .right-padding {
+    padding-right: $large-gap;
+  }
+};
+
+.left-padding {
+  padding-left: $large-gap;
+}
+
+//Overriding defaults
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: $content-font;
+  color: $text-colour;
+}
+
+h1 {
+
+  @include mq-web-layout {
+    font-size: 5rem;
+  };
+  @include mq-phone-layout {
+    font-size: 3.4rem;
+  }
+  font-family: $header-font;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
