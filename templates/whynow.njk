@@ -1,58 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113128532-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-113128532-1');
-</script>
-<link rel="stylesheet" href="./css/content_pages.css" type="text/css" >
-<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-      
-  
-      
+    {% include "partials/_content_head.njk" %}
+    {% for content in contentList %}
+      {% if content.title == "Why This, Why Now?"%}
       <title>Why This, Why Now?</title>
-      <meta name="description" content="A year ago my day job involved listening to other people talk about all the reasons their current job was unsatisfying and why retraining as a software developer was the right move for them." />
+      <meta name="description" content="{{content.short_blurb}}" />
 
       <!-- Twitter Card data -->
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:title" content="Why This, Why Now?">
-      <meta name="twitter:description" content="A year ago my day job involved listening to other people talk about all the reasons their current job was unsatisfying and why retraining as a software developer was the right move for them. For some people it was about job security, others wanted a job with more of a challenge, or more flexibility, or more money.">
+      <meta name="twitter:title" content="{{content.title}}">
+      <meta name="twitter:description" content="{{content.long_blurb}}">
       <meta name="twitter:creator" content="@ktweeden">
 
       <!-- Open Graph data -->
-      <meta property="og:title" content="Why This, Why Now?" />
+      <meta property="og:title" content="{{content.title}}" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="http://www.kate-preston.co.uk/whynow.html" />
-      <meta property="og:description" content="A year ago my day job involved listening to other people talk about all the reasons their current job was unsatisfying and why retraining as a software developer was the right move for them. For some people it was about job security, others wanted a job with more of a challenge, or more flexibility, or more money." />
+      <meta property="og:description" content="{{content.long_blurb}}" />
       <meta property="og:site_name" content="kate-preston.co.uk" />
-    
-  
+    {% endif %}
+  {% endfor %}
   </head>
   <body>
     <div class="content-container">
       <div class="title">
         <h2>Why this, why now?</h2>
       </div>
-      <nav class="nav-bar">
-  
-    <li class="nav-link">
-      <a href="/">Home</a>
-    </li>
-  
-    <li class="nav-link">
-      <a href="/about_me.html">About Me</a>
-    </li>
-  
-</nav>
-
+      {% include "./partials/_navigation.njk" %}
       <article class="content">
         <p>A year ago my day job involved listening to other people talk about
           all the reasons their current job was unsatisfying and why retraining
@@ -122,18 +97,7 @@
           student of Cohort 19.</p>
 
       </article>
-      <footer>
-  <a href="https://github.com/ktweeden">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://twitter.com/ktweeden">
-    <i class="fab fa-twitter"></i>
-  </a>
-  <a href="https://www.instagram.com/kate_l_preston/">
-    <i class="fab fa-instagram right-padding"></i>
-  </a>
-</footer>
-
+      {% include "./partials/_footer.njk" %}
     </div>
   </body>
 </html>

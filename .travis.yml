@@ -1,9 +1,10 @@
-language: generic
-install: gem install sass
+language: javascript
+install: npm install
 script:
   - env
-  - "sass scss/main.scss:css/main.css"
-  - "sass scss/content_pages.scss:css/content_pages.scss"
+  - node ./build/template_render
+  - ./node_modules/.bin/node-sass scss/main.scss css/main.css
+  - ./node_modules/.bin/node-sass scss/content_pages.scss css/content_pages.scss
 
 deploy:
   provider: pages
