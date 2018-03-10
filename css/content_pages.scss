@@ -92,7 +92,7 @@ h3 {
   justify-content: center; }
   @media only screen and (orientation: portrait) and (min-device-width: 605px), only screen and (orientation: landscape) and (min-device-width: 605px) {
     .content-container {
-      grid-template: auto 1fr 10% /10% 40% 40% 10%;
+      grid-template: auto 1fr 10% /10% 50% 30% 10%;
       grid-template-areas: "lmargin title navigation rmargin" "lmargin content content rmargin" "footer footer footer footer"; } }
   @media only screen and (orientation: portrait) and (max-device-width: 604px), only screen and (orientation: landscape) and (max-device-width: 604px) {
     .content-container {
