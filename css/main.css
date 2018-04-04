@@ -249,7 +249,5 @@ h3 {
     text-decoration: none;
     color: black; }
   .container footer {
-    grid-area: footer; }
-    @media only screen and (orientation: portrait) and (max-device-width: 604px), only screen and (orientation: landscape) and (max-device-width: 604px) {
-      .container footer {
-        background-color: white; } }
+    grid-area: footer;
+    background-color: white; }
