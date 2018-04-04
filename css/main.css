@@ -203,10 +203,8 @@ h3 {
       .container .nav-bar {
         justify-content: flex-end; } }
   .container .blog-feed {
-    grid-area: content; }
-    @media only screen and (orientation: portrait) and (max-device-width: 604px), only screen and (orientation: landscape) and (max-device-width: 604px) {
-      .container .blog-feed {
-        padding-bottom: 4rem; } }
+    grid-area: content;
+    padding-bottom: 4rem; }
     .container .blog-feed .blog-snippet {
       display: flex; }
       @media only screen and (orientation: portrait) and (min-device-width: 605px), only screen and (orientation: landscape) and (min-device-width: 605px) {
